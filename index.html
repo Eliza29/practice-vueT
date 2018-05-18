@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://unpkg.com/vue-easytable/umd/css/index.css">
+
+  <title>Document</title>
+</head>
+
+<body>
+
+  <div id="app">
+    <v-table :width="1000" :columns="columns" :table-data="tableData" :show-vertical-border="false"></v-table>
+  </div>
+  <script src="https://unpkg.com/vue/dist/vue.js"></script>
+  <script src="https://unpkg.com/vue-easytable/umd/js/index.js"></script>
+  <script>
+    new Vue({
+      el: '#app',
+      data: function () {
+        return {
+          tableData: [
+            { "name": "oun", "tel": "156*****1987", "hobby": "钢琴、书法、唱歌", "address": "lima" },
+            { "name": "dos", "tel": "182*****1538", "hobby": "钢琴、书法、唱歌", "address": "lima" },
+            { "name": "tres", "tel": "161*****0097", "hobby": "钢琴、书法、唱歌", "address": "lima" },
+            { "name": "cuatro", "tel": "197*****1123", "hobby": "钢琴、书法、唱歌", "address": "lima" },
+            { "name": "cinco", "tel": "183*****6678", "hobby": "钢琴、书法、唱歌", "address": "lima" }
+          ],
+          columns: [
+            { field: 'name', title: 'name', width: 100, titleAlign: 'center', columnAlign: 'center' },
+            { field: 'tel', title: 'Tel', width: 260, titleAlign: 'center', columnAlign: 'center' },
+            { field: 'hobby', title: 'hobby', width: 330, titleAlign: 'center', columnAlign: 'center' },
+            { field: 'address', title: 'address', titleAlign: 'center', columnAlign: 'left' }
+          ]
+        }
+      }
+    })
+  </script>
+  
+  
+</body>
+
+</html>
