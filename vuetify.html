@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons' rel="stylesheet">
+  <link href="https://unpkg.com/vuetify/dist/vuetify.min.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+  <title>Vuetify</title>
+</head>
+
+<body>
+  <div id="app">
+    <v-app id="inspire">
+      <div>
+        <v-checkbox v-model="landscape" label="Landscape"></v-checkbox>
+        <v-time-picker v-model="picker" :landscape="landscape"></v-time-picker>
+      </div>
+    </v-app>
+  </div>
+
+  <script src="https://unpkg.com/vue/dist/vue.js"></script>
+  <script src="https://unpkg.com/vuetify/dist/vuetify.js"></script>
+  <script>
+    new Vue({
+      el: '#app',
+      data() {
+        return {
+          picker: null,
+          landscape: false
+        }
+      }
+    })
+
+  </script>
+</body>
+
+</html>
